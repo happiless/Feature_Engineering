@@ -16,7 +16,7 @@ print(one_hot_df.head())
 dummy_df = pd.get_dummies(df, prefix=['City'], drop_first=True)
 print(dummy_df)
 
-model = linear_model.LinearRegression()
+model = linear_model.LinearRegression() 
 model.fit(one_hot_df[['City_NYC', 'City_SF', 'City_Seattle']], one_hot_df[['Rent']])
 print(f'w: {model.coef_}, b: {model.intercept_}')
 
